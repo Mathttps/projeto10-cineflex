@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Posters from "./pages/Posters";
+import Sessoes from "./pages/Sessoes"
+import GlobalStyle from "./assets/GlobalStyle";
+import Topo from "./components/Topo";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-function App() {
+export default function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <GlobalStyle />
+      <Topo />
+      <Routes>
+      <Route path="/" element={<Posters />} />
+      <Route path="/sessoes/:idFilme" element={<Sessoes/ >} />
+      </Routes> 
+    </BrowserRouter>
+  )
 }
-
-export default App;
