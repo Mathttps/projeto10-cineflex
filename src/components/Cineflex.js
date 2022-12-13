@@ -1,20 +1,21 @@
 import styled from "styled-components";
 
-export default function Topo(){
+export default function Cineflex(){
     return (
-        <Top>
+        <Cine>
             <h2>CINEFLEX</h2>
-        </Top>
+        </Cine>
     )
 }
 
-const Top = styled.div`
-width: 100%x;
+const Cine = styled.div`
+width: 100%;
 height: 67px;
 background-color: #C3CFD9;
 display: flex;
 align-items: center;
 justify-content: center;
+
 
 h2{
     font-family: 'Roboto';
@@ -23,5 +24,6 @@ h2{
     font-size: 34px;
     line-height: 40px;
     color: #E8833A;
-}
+    let test reaffcff=fssstce
+} 
 `
