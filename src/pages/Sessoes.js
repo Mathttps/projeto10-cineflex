@@ -6,12 +6,12 @@ import styled from "styled-components";
 import Footer from "../components/Footer";
 import BotaoSessao from "../components/BotaoSessao";
 
-function Data({weekday, date, showtimes}) {
+function Data({diasemana, diac, sessoesdia}) {
     return(
         <PaginaContent data-test="movie-day">
-            <div>{weekday + " - " + date}</div>
+            <div>{diasemana + " - " + diac}</div>
             <Sessao>
-                {showtimes.map((n) => <BotaoSessao key={n.id} sessionID={n.id} time={n.name}/>)}
+                {sessoesdia.map((n) => <BotaoSessao key={n.id} sessionID={n.id} time={n.name}/>)}
             </Sessao>
         </PaginaContent>
     )
@@ -38,7 +38,7 @@ export default function Sessoes() {
     return (
         <ContentSessoes>
             <Topo>Selecione o horário</Topo>
-            {dias.map((m) => <Data key={m.id} weekday={m.weekday} date={m.date} showtimes={m.showtimes} />)}
+            {dias.map((m) => <Data key={m.id} diasemana={m.weekday} diac={m.date} sessoesdia={m.showtimes} />)}
             <Footer imagemFilme={imagem} tituloFilme={nomeFilme} />
         </ContentSessoes>
     )

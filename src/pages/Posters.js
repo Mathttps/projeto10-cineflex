@@ -24,7 +24,7 @@ export default function Posters() {
             <Container>
                 <SelecFilme>Selecione o filme</SelecFilme>
                 <ListaFilmes>
-                    {posters.map((film) => <Filmes key={film.id} id={film.id} image={film.posterURL} />)}
+                    {posters.map((m) => <Filmes key={m.id} id={m.id} image={m.posterURL} />)}
                 </ListaFilmes>
             </Container>
         </div>
