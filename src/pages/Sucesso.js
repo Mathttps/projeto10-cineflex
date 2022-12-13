@@ -14,12 +14,14 @@ export default function Successo({ infoFilme }) {
             <Containers data-test="seats-info">
                 <p>Ingressos</p>
                 {infoFilme.seats.map((seat, index) => <Dados key={index}>{"Assento " + seat}</Dados>)}
+                {/* <Dados><span>{infoFilme.date + ' '}</span><span>{infoFilme.time}</span></Dados> */}
             </Containers>
 
             <Containers data-test="client-info">
                 <p>Comprador</p>
                 <Dados>{"Nome: " + infoFilme.nomeCliente}</Dados>
                 <Dados>{"CPF: " + infoFilme.cpfCliente}</Dados>
+                {/* <Dados>{"CPF: " + infoFilme.cpfCliente}</Dados> */}
             </Containers>
             <Link to="/">
                 <Botao data-test="go-home-btn">Voltar pra Home</Botao>
