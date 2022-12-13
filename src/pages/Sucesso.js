@@ -7,19 +7,19 @@ export default function Successo({ infoFilme }) {
             <Sucesso>Pedido feito<br />com sucesso!</Sucesso>
             <Containers data-test="movie-info">
                 <p>Filme e sessão</p>
-                <Info>{infoFilme.movie}</Info>
-                <Info><span>{infoFilme.date + ' '}</span><span>{infoFilme.time}</span></Info>
+                <Dados>{infoFilme.movie}</Dados>
+                <Dados><span>{infoFilme.date + ' '}</span><span>{infoFilme.time}</span></Dados>
             </Containers>
 
             <Containers data-test="seats-info">
                 <p>Ingressos</p>
-                {infoFilme.seats.map((seat, index) => <Info key={index}>{"Assento " + seat}</Info>)}
+                {infoFilme.seats.map((seat, index) => <Dados key={index}>{"Assento " + seat}</Dados>)}
             </Containers>
 
             <Containers data-test="client-info">
                 <p>Comprador</p>
-                <Info>{"Nome: " + infoFilme.nomeCliente}</Info>
-                <Info>{"CPF: " + infoFilme.cpfCliente}</Info>
+                <Dados>{"Nome: " + infoFilme.nomeCliente}</Dados>
+                <Dados>{"CPF: " + infoFilme.cpfCliente}</Dados>
             </Containers>
             <Link to="/">
                 <Botao data-test="go-home-btn">Voltar pra Home</Botao>
@@ -49,7 +49,7 @@ const Containers = styled.div`
     }
 `
 
-const Info = styled.div`
+const Dados = styled.div`
     margin-bottom: 9px;
 `
 
