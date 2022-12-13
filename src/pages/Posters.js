@@ -24,18 +24,18 @@ export default function Posters() {
             <Container>
                 <SelecFilme>Selecione o filme</SelecFilme>
                 <ListaFilmes>
-                    {posters.map((m) => <Filmes key={m.id} id={m.id} image={m.posterURL} />)}
+                    {posters.map((m) => <Filmes key={m.id} idFilme={m.id} imagemFilme={m.posterURL} />)}
                 </ListaFilmes>
             </Container>
         </div>
     )
 }
 
-function Filmes({ id, image }) {
+function Filmes({ idFilme, imagemFilme }) {
     return (
-        <Link data-test="movie" to={"/sessoes/" + id}>
+        <Link data-test="movie" to={"/sessoes/" + idFilme}>
             <ContainerFilmes>
-                <img src={image} alt="poster" width="130" height="190" />
+                <img src={imagemFilme} alt="poster" width="130" height="190" />
             </ContainerFilmes>
         </Link>
     )
